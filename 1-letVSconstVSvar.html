@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>let vs const vs var</title>
+  </head>
+  <body>
+    <script>
+      // a)
+      // var a;
+      // let b;
+
+      // console.log(a); // undefined
+      // console.log(b); // undefined
+
+      // a = "aa";
+      // b = "bb";
+
+      // console.log(a); // aa
+      // console.log(b); // bb
+
+      //-------------------------------------------
+      // b)
+      // console.log(a); // undefined (declared but not initialized)
+      // console.log(city); // RefError: city is not defined  (not declared)
+      // console.log(b); // RefError: cannot access 'b' before initialization  (declared but cannot be accessed before initialization)
+
+      // var a; // created inside a global scope
+      // let b; // created seperately from global scope
+      // // const c;
+
+      // a = "aa";
+      // b = "bb";
+
+      // console.log(a); // aa
+      // console.log(b); // bb
+
+      // c)
+      //---------- temporal dead zone for 'b' started -------------
+      debugger;
+
+      // console.log(a);
+      // console.log(city);
+      // console.log(b);
+
+      // var a;
+      // let b;
+
+      // a = "aa";
+      // b = "bb";        temporer dead zone for 'b' ended -------------
+
+      // console.log(a); // aa
+      // console.log(b); // bb
+    </script>
+  </body>
+</html>
